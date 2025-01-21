@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sonya massey - The Ultimate Meme Experience</title>
+  <style>
+    /* Add your CSS styles here */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap');
+
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Art Deco Crypto Style */
+    :root {
+      --primary-color: #0d2149;
+      --secondary-color: #f9d56e;
+      --accent-color: #e8e8e8;
+      --text-color: #333;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    p {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-color);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Intro Section */
+    .intro {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .intro-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      animation: gradientAnimation 10s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .intro-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    .intro-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro-content p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .intro-content button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .intro-content button:hover {
+      background-color: var(--accent-color);
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 0;
+      background-color: var(--primary-color);
+      color: var(--accent-color);
+    }
+
+    .about h2 {
+      color: var(--secondary-color);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .about-card {
+      background-color: var(--accent-color);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      animation: slideInLeft 1s ease;
+    }
+
+    .about-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    /* Add more sections here */
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .intro-content h1 {
+        font-size: 2rem;
+      }
+
+      .intro-content p {
+        font-size: 1.2rem;
+      }
+
+      .about-content {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Intro Section -->
+  <section class="intro">
+    <div class="intro-background"></div>
+    <div class="intro-content">
+      <h1>Welcome to the World of sonya massey</h1>
+      <p>Your portal to the most exciting meme-powered cryptocurrency.</p>
+      <button>Explore Now</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <h2>What is sonya massey?</h2>
+      <div class="about-content">
+        <div class="about-card">
+          <img src="./logo.png" alt="About sonya massey">
+          <p>The image depicts a stylized female figure, reminiscent of a classical goddess or allegorical representation of finance, within a circular frame against a vibrant yellow background.  She holds a dollar sign aloft in her raised right hand, symbolizing financial power or control. Her left arm is bent, and a money bag with a dollar sign rests near her elbow.  Two wolf heads, one larger and more prominent than the other, are positioned near her head, possibly representing guardianship, instinct, or aggression in the financial world. A stylized cityscape or building is situated near her lower right arm, suggesting the urban or economic environment.  A branch with leaves extends from her raised hand, possibly symbolizing peace or prosperity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add more sections here -->
+
+  <script>
+    // Add your JavaScript code here
+    const introButton = document.querySelector('.intro-content button');
+
+    introButton.addEventListener('click', () => {
+      const scrollTarget = document.querySelector('.about');
+      scrollTarget.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>
